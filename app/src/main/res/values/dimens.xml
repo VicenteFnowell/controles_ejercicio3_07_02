@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margingeneral">12dp</dimen>
+    <dimen name="dimencero">0dp</dimen>
+    <dimen name="tamborde">2dp</dimen>
+    <dimen name="textoestandar">18dp</dimen>
+    <dimen name="textotv">15dp</dimen>
+
+
+
+
+
+</resources>

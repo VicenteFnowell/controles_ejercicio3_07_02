@@ -8,4 +8,40 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="estilolayouts">
+
+        <item name="android:layout_margin">@dimen/margingeneral</item>
+        <item name="android:background">@drawable/layoutspersonalizados</item>
+        <item name="android:shadowColor">@color/colorsombra</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">5</item>
+
+    </style>
+
+    <style name="estilolayoutsresultados">
+
+        <item name="android:background">@drawable/layoutspersonalizados</item>
+        <item name="android:shadowColor">@color/colorsombra</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">5</item>
+
+    </style>
+
+    <style name="estiloedittext">
+        <item name="android:textSize">@dimen/textoestandar</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:ems">10</item>
+
+
+    </style>
+
+    <style name="estilotextviews">
+        <item name="android:textSize">@dimen/textotv</item>
+        <item name="android:textStyle">bold</item>
+
+
+    </style>
+
 </resources>

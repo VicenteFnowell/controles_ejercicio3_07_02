@@ -4,247 +4,272 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pergamino"
     android:orientation="vertical"
     tools:context="com.example.controles_ejercicio3_07_02.MainActivity">
 
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/scrollformulario"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/etnombre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Nombre" />
-
-                <EditText
-                    android:id="@+id/etapellido"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Apellido" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
                 <LinearLayout
+                    style="@style/estilolayouts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvtituprovincia"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Provincia" />
-
-                    <Spinner
-                        android:id="@+id/spprovincia"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvtituedad"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Edad" />
 
                     <EditText
-                        android:id="@+id/etedad"
+                        android:id="@+id/etnombre"
+                        style="@style/estiloedittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="numberSigned" />
+                        android:hint="@string/Nombre"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/etapellido"
+                        style="@style/estiloedittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Apellidos"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/estilolayouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/estilolayouts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvtituprovincia"
+                            style="@style/estilotextviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Provincia"
+                            android:textAlignment="center" />
+
+                        <Spinner
+                            android:id="@+id/spprovincia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/estilolayouts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvtituedad"
+                            style="@style/estilotextviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Edad"
+                            android:textAlignment="center" />
+
+                        <EditText
+                            android:id="@+id/etedad"
+                            style="@style/estiloedittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberSigned"
+                            android:maxLength="2"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/estilolayouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvestcivil"
+                        style="@style/estilotextviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/EstadoCivil"
+                        android:textAlignment="center" />
+
+                    <RadioGroup
+                        android:id="@+id/rgestcivil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbsoltero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Soltero" />
+
+                        <RadioButton
+                            android:id="@+id/rbcasado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Casado" />
+
+                        <RadioButton
+                            android:id="@+id/rbdivorciado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Divorciado" />
+
+                        <RadioButton
+                            android:id="@+id/rbviudo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Viudo" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cbterminos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Terminos" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnaceptar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="clickAceptar"
+                        android:text="@string/Aceptar" />
+
+                    <Button
+                        android:id="@+id/btnborrar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_basura"
+                        android:onClick="clickBorrar"
+                        android:text="" />
 
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+        </ScrollView>
 
-                <TextView
-                    android:id="@+id/tvestcivil"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Estado Civil" />
+        <LinearLayout
+            android:id="@+id/laynomape"
+            style="@style/estilolayoutsresultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layproest"
+            android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/rgestcivil"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rbsoltero"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Soltero/a" />
-
-                    <RadioButton
-                        android:id="@+id/rbcasado"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Casado/a" />
-
-                    <RadioButton
-                        android:id="@+id/rbdivorciado"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Divorciado/a" />
-
-                    <RadioButton
-                        android:id="@+id/rbviudo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Viudo/a" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/cbterminos"
+            <TextView
+                android:id="@+id/tvnombre"
+                style="@style/estilotextviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Acepto los términos" />
+                android:layout_weight="1"
+                android:text="@string/Nombre" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvapellido"
+                style="@style/estilotextviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnaceptar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Aceptar"
-                    android:onClick="clickAceptar"/>
-
-                <Button
-                    android:id="@+id/btnborrar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@mipmap/ic_eliminar"
-                    android:padding="10dp"
-                    android:onClick="clickBorrar"
-                    android:text="" />
-
-            </LinearLayout>
+                android:layout_weight="1"
+                android:text="@string/Apellidos" />
         </LinearLayout>
 
-    </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvnombre"
+        <LinearLayout
+            android:id="@+id/layedad"
+            style="@style/estilolayoutsresultados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nombre: " />
-
-        <TextView
-            android:id="@+id/tvapellido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Apellido:" />
-    </LinearLayout>
+            android:layout_above="@+id/btnadelante"
+            android:orientation="vertical">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvprovincia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Provincia:" />
-
-        <TextView
-            android:id="@+id/tvestado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Estado Civil:" />
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-        <TextView
-            android:id="@+id/tvedad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Edad:" />
-    </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btnatras"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tvedad"
+                style="@style/estilotextviews"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:onClick="botonatras"
-                android:text="Button" />
+                android:text="@string/Edad" />
+        </LinearLayout>
 
-            <Button
-                android:id="@+id/btnadelante"
-                android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/layproest"
+            style="@style/estilolayoutsresultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layedad"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvprovincia"
+                style="@style/estilotextviews"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:onClick="botonadelante"
-                android:layout_alignTop="@+id/btnatras"
-                android:text="Button" />
-        </RelativeLayout>
+                android:layout_weight="1"
+                android:text="@string/Provincia" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvestado"
+                style="@style/estilotextviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/EstadoCivil" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnatras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:drawable/arrow_down_float"
+            android:onClick="botonatras" />
+
+        <Button
+            android:id="@+id/btnadelante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnatras"
+            android:background="@android:drawable/arrow_up_float"
+            android:onClick="botonadelante" />
+    </RelativeLayout>
+
+</LinearLayout>
